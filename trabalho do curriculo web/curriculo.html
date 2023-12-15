@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+            .titulo{
+                background-color: #7dc079;
+                color: white;
+                padding: 2%;
+                margin: 0;
+
+                   }
+
+*{
+    margin:0;
+    padding: 0;
+    right: 100px;
+
+    box-sizing: border-box;
+}
+.hero{
+    width:100%;
+    height: 100vh;
+    background: #d1d1d1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    position: relative;
+    right: 502px;
+    bottom: 90px;
+    width: 270px;
+    height: 370px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    position: left;
+    text-align: center;
+    color: #333;
+
+}
+.card h1{
+    font-weight: 500;
+    color: #000;
+}
+.card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+label{
+    display: block;
+    width: 200px ;
+    background: #e3362c;
+    color: #fff;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 5px;
+    cursor: pointer;
+}
+input{
+    display: none;
+}
+        </style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+<body>
+    <div class="titulo"><center><h2>Curriculo Web</h2></center></div>
+
+    <div class="hero">
+        <div class="card">
+            <h1>julio</h1>
+            <p>@rei delas</p>
+            <img src="images/profile.png" id="profile-pic">
+            <label for="input-file">Chose</label>
+            <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+        </div>
+    </div>
+      <p>@rei delas</p>
+    <script>
+
+        let profilePic = document.getElementById("profile-pic");
+        let inputFile = document.getElementById("input-file");
+
+        inputFile.onchange = function(){
+            profilePic.src = URL.createObjectURL(inputFile.files[0]);
+        }
+
+    </script>
+</body>
+</html>
