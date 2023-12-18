@@ -19,16 +19,16 @@
 }
 .hero{
     width:100%;
-    height: 100vh;
+    height: 110vh;
     background: #d1d1d1;
-    display: flex;
+    display:grid;
     align-items: center;
     justify-content: center;
 }
 .card{
     position: relative;
     right: 502px;
-    bottom: 90px;
+    bottom:20% ;
     width: 270px;
     height: 370px;
     background: #fff;
@@ -51,18 +51,99 @@
     margin-bottom: 30px;
 }
 
-label{
+.label1{
     display: block;
     width: 200px ;
-    background: #e3362c;
+    background: #04AA6D;
     color: #fff;
     padding: 12px;
     margin: 10px auto;
     border-radius: 5px;
     cursor: pointer;
 }
-input{
+.input1{
     display: none;
+}
+.container{
+    display: flex;
+    border:5px solid #cbd3cd;
+    position: absolute;
+    left: 315%;
+    bottom: 0%;
+    width: 150%;
+    height:177%;
+    top: -3%;
+}
+.column{
+    flex: 1;
+    padding: 20px;
+    border:1px solid rgb(93, 93, 93);
+    margin: 5px;
+    border-radius: 18px;
+
+}
+* {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 94%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
         </style>
 
@@ -70,7 +151,8 @@ input{
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <div class="titulo"><center><h2>Curriculo Web</h2></center></div>
@@ -80,11 +162,106 @@ input{
             <h1>julio</h1>
             <p>@rei delas</p>
             <img src="images/profile.png" id="profile-pic">
-            <label for="input-file">Chose</label>
-            <input type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+            <label class="label1" for="input-file">Chose</label>
+            <input class="input1" type="file" accept="image/jpeg, image/png, image/jpg" id="input-file">
+            <div style="position: relative;left: 300px; right: auto; bottom: 360px; width: 240px; height: 40px; background-color: rgb(93, 93, 93); border: #000; border-radius:5%;height: 470px;"><h2 style="color: #fff;">Habilidades</h2>
+                <div><p><label for="inputtext" style="color: #fff;">digite suas habilidades:</label>
+                    <input type="text" id="inputtext"></p>
+                    <br>
+                    <label for="inputtext" style="color: #fff;"></label>
+                    <input type="text" id="inputtext"></p>
+                    <br>
+                    <label for="inputtext" style="color: #fff;"></label>
+                    <input type="text" id="inputtext"></p>
+                    <br>
+                    <label for="inputtext" style="color: #fff;"></label>
+                    <input type="text" id="inputtext"></p>
+                    <br>
+                    <label for="inputtext" style="color: #fff;"></label>
+                    <input type="text" id="inputtext"></p>
+                    
+
+                    <div style="position: relative; background-color: rgb(93, 93, 93); border: #000; border-radius: 5%; left: 120%; bottom: 458px; width: 230px; height: 470px;"><h2 style="color: #fff;">Cursos/Faculdades</h2>
+                        <div><p><label for="inputtext" style="color: #fff;">digite seus cursos:</label>
+                            <input type="text" id="inputtext"></p>
+                            <br>
+                            <label for="inputtext" style="color: #fff;"></label>
+                            <input type="text" id="inputtext"></p>
+                            <br>
+                            <label for="inputtext" style="color: #fff;"></label>
+                            <input type="text" id="inputtext"></p>
+                            <br>
+                            <label for="inputtext" style="color: #fff;"></label>
+                            <input type="text" id="inputtext"></p>
+                            <br>
+                            <label for="inputtext" style="color: #fff;"></label>
+                            <input type="text" id="inputtext"></p>
+                            
+                </div>
+            </div>
         </div>
     </div>
-      <p>@rei delas</p>
+    <div style="position: relative; background-color: rgb(93, 93, 93); border:#d1d1d1 solid;border-radius: 5%; left: -2%; bottom: 450px; width: 230px; height: 268px;"><h2 style="color: #fff;">
+        <p><label for="inputtext" style="color: #fff;">Contatos:</label>
+            <input type="text" id="inputtext"></p>
+            
+            <label for="inputtext" style="color: #fff;"></label>
+            <input type="text" id="inputtext"></p>
+            
+            <label for="inputtext" style="color: #fff;"></label>
+            <input type="text" id="inputtext"></p>
+            
+            <i class="fab fa-github" style="position:relative; right:77px; bottom: 210px;"></i>
+            <i class="material-icons" style="">&#xe0be;</i>
+
+    </div>
+
+    <div class="container">
+        <form action="/action_page.php">
+            <div class="row">
+              <div class="col-25">
+                <label for="fname">Primeiro Nome</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Seu Nome..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="lname">Sobrenome</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="Seu Sobre Nome..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="country">País</label>
+              </div>
+              <div class="col-75">
+                <select id="country" name="country">
+                  <option value="australia">Australia</option>
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+                  <option value="usa">Brasil</option>
+                </select>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject">Sobre Você</label>
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Escreva Sobre Você.." style="height:200px"></textarea>
+              </div>
+            </div>
+            <br>
+            <div class="row">
+              <input type="submit" value="Submit">
+            </div>
+            </form>
+          </div>
+
     <script>
 
         let profilePic = document.getElementById("profile-pic");
