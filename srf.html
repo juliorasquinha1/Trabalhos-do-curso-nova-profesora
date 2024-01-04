@@ -7,30 +7,10 @@
 </head>
 <body>
     <script>
-
-var a = parseFloat(window.prompt('digite sua idade:'));
-var h = parseInt(window.prompt('digite  numero (1) se voce for homem , e numero (2) se for mulher:'));
-
-
-if(a == 18 && h == 1){
-    window.alert('voce é maior de idade e deve servir')
-
-}else if(a == 17 && h == 1) {
-    window.alert('voce deve se alistar ');
-
-}else if(a <= 16 && h == 1) {
-    window.alert('voce ainda nao pode se alistar ');
-
-}if(a == 18 && h == 2){
-    window.alert('voce é maior de idade e pode servir se quiser')
-
-}else if(a == 17 && h == 2) {
-    window.alert('voce pode se alistar ');
-
-}else if(a <= 16 && h == 2) {
-    window.alert('voce nao pode se alistar ');
-}
-
+        do{
+      valor = window.prompt('digite um numero maior que 100:')}
+      while (valor<100)
+      window.alert('ok')
     </script>
 </body>
 </html>
