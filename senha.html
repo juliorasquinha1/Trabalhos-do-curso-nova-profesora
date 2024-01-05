@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+       nome= window.prompt('digite seu nome ele não pode conter mais de 10 palavras:');
+       senha= window.prompt('digite sua senha:');
+       idade= window.prompt('digite sua idade:');
+       salario= window.prompt('qual o seu salario:');
+       sexualidade= window.prompt('voce é masculino digite (M), feminino digite:(F), não binario digite(NB):');
+       let tamanho = nome.length
+
+       while(tamanho >= 10){
+           nome = window.prompt('o nome não pode conter mais de 10 caracteres:');
+           tamanho = nome.length
+       }
+            while(senha == nome){
+            senha= window.prompt('a senha nao pode ser igual o nome digite outra:'); 
+            };
+                 while(idade >= 150){
+                 idade = window.prompt('voce nao pode ter mais de 150 anos digite sua idade por favor:');
+                 }
+                     while(salario < 0){
+                     salario = window.prompt(' nao tem como voce receber 0$, quanto é seu salario:');
+                     }
+                         while(corpo != M,F,NB){
+                         sexualidade = window.prompt(' voce não falou as informações corretas ou digitou errado:');
+                         }      
+        </script>
+</body>
+</html>
