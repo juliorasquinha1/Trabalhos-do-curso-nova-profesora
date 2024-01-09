@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+</head>
+<body>
+
+<script>
+    // Objeto para armazenar informações do usuário
+    let userInfo = {
+        nome: '',
+        idade: 0,
+        salario: 0.0
+    };
+
+    // Função para solicitar informações do usuário
+    function coletarInformacoes() {
+        userInfo.nome = prompt("Digite seu nome:");
+        userInfo.idade = parseInt(prompt("Digite sua idade:"))
+
+        let tamanho = nome.length
+
+        while(tamanho >= 10){
+            nome = window.prompt('o nome não pode conter mais de 10 caracteres:');
+            tamanho = nome.length
+        }
+
+        while(userInfo.idade >= 150){
+                 userInfo.idade = window.prompt('voce nao pode ter mais de 150 anos digite sua idade por favor:')
+                 };
+
+        userInfo.salario = parseFloat(prompt("Digite seu salário:"));
+        while(userInfo.salario == 0){
+                    userInfo.salario = window.prompt(' nao tem como voce receber 0$, quanto é seu salario:');
+                     };
+    }
+
+    // Coleta as informações do usuário
+    coletarInformacoes();
+
+    // Exibe as informações na tela
+    document.write("<h2>Informações do Usuário:</h2>");
+    document.write("<p><strong>Nome:</strong> " + userInfo.nome + "</p>");
+    document.write("<p><strong>Idade:</strong> " + userInfo.idade + "</p>");
+    document.write("<p><strong>Salário:</strong> $" + userInfo.salario.toFixed(2) + "</p>");
+</script>
+
+</body>
+</html>

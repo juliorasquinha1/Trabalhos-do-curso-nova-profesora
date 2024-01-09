@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function pergunte() {
+            var aceitarcookies = window.confirm(`Você aceita os cookies? ${nome}`);
+            if (aceitarcookies) {
+                sim();
+            } else {
+                Nao();
+            }
+        }
+    
+        function Nao() {
+            window.alert('Você não aceitou cookies');
+        }
+    
+        function sim() {
+            window.alert('Você aceitou os cookies');
+        }
+
+        function coletarInformacoes() {
+        nome = prompt("Digite seu nome:");
+       
+        function condicao(){
+
+            let tamanho = nome.length
+        while(tamanho >= 10){
+            window.alert('incorreto')
+            nome = window.prompt('o nome não pode conter mais de 10 caracteres, digite novamente:');
+            tamanho = nome.length
+
+        }
+
+       
+        }
+       window.alert('dados corretos')
+    }
+
+    // Coleta as informações do usuário
+    coletarInformacoes();
+    pergunte();
+    </script>
+</body>
+</html>

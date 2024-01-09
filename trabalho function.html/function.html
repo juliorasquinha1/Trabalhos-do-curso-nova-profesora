@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+function calcularMedia() {
+    var certeza,valor1,valor2,valor3,valor4,valor5
+    certeza=window.alert('ola iremos calcular a media das suas notas dividindo-os por 5 ok');
+
+    valor1=parseFloat(window.prompt('digite a 1 nota para calcular a media:'))
+    valor2=parseFloat(window.prompt('digite a 2 nota para calcular a media:'))
+    valor3=parseFloat(window.prompt('digite a 3 nota para calcular a media:'))
+    valor4=parseFloat(window.prompt('digite a 4 nota para calcular a media:'))
+    valor5=parseFloat(window.prompt('digite a 5 nota para calcular a media:'))
+  // Calcula a média
+  var media = (valor1 + valor2 + valor3 + valor4 + valor5) / 5;
+ 
+  // Retorna a média
+  return media;
+}
+
+// Chama a função com alguns valores de exemplo
+var resultadoMedia = calcularMedia(10, 20, 30, 40, 50);
+
+// Exibe o resultado em um alerta
+alert("A média dos valores é: " + resultadoMedia)
+    </script>
+
+</body>
+</html>
